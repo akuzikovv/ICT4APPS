@@ -131,6 +131,23 @@ Feature: In this feature I'm testing the Products Page of ict4Apps site without 
     When  Move the cursor to product image
     Then  Image is changed to product name,short description,Read More link and social networks links
 
+  Scenario: Demo.ict.13.0029  Check transition to product page after clicking on the name of product.
+    When  Click on the button of view mode as a grid
+    When  Click on title of product
+    Then  The page of detail info about product is open
+
+  Scenario: Demo.ict.13.0030  Check transition to product page after clicking on the "Read More" link.
+    When  Click on the button of view mode as a grid
+    When  Click on the Read More link
+    Then  The page of detail info about product is open
+
+  Scenario: Demo.ict.13.0031  Check transition to product page after clicking on the "Read More" link.
+    When  Click on title of product
+    When  Click on Tag list
+    Then  Products list is opened in appropriate list of categories
+
+
+
 
 
 
