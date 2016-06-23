@@ -146,6 +146,11 @@ Feature: In this feature I'm testing the Products Page of ict4Apps site without 
     When  Click on Tag list
     Then  Products list is opened in appropriate list of categories
 
+  Scenario: Demo.ict.13.0032  Verify functionality of Breadcrumbs elements after clicking Products at breadcrumbs.
+    When  Click on title of product
+    When  Click on Products at breadcrumbs
+    Then  open Products page
+
 
 
 
