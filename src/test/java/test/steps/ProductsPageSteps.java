@@ -273,6 +273,16 @@ public class ProductsPageSteps {
         endUserSteps.clickOnTheBackTopButton();
     }
 
+    @When("^Click on the button of view mode as a grid$")
+    public void clickOnTheButtonOfViewModeAsAGrid() throws Throwable {
+        endUserSteps.clickOnTheButtonOfViewModeAsAGrid();
+    }
+
+    @Then("^All products is displayed in grid mode$")
+    public void allProductsIsDisplayedInGridMode() throws Throwable {
+        endUserSteps.checkThatallProductsIsDisplayedInGridMode();
+    }
+
 
 
 
