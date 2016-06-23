@@ -126,6 +126,11 @@ Feature: In this feature I'm testing the Products Page of ict4Apps site without 
     When  Click on the button of view mode as a grid
     Then  All products is displayed in grid mode
 
+  Scenario: Demo.ict.13.0028  Check that image is changing to product name, short description, "Read More" link and social networks links.
+    When  Click on the button of view mode as a grid
+    When  Move the cursor to product image
+    Then  Image is changed to product name,short description,Read More link and social networks links
+
 
 
 
