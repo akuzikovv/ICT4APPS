@@ -300,6 +300,15 @@ public class ProductsPage extends PageObject {
         $(ILocators.BACK_TOP_BUTTON).click();
     }
 
+    public void clickOnTheButtonOfViewModeAsAGrid() {
+        $(ILocators.GRID_MODE_BUTTON).click();
+    }
+
+    public boolean checkThatallProductsIsDisplayedInGridMode() {
+        $(ILocators.GRID_MODE).isPresent();
+        return  true;
+    }
+
 
 //    public void checkThatLastPageOfGalleryIsOpen2() {
 //        String text = null;

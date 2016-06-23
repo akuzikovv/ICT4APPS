@@ -122,6 +122,11 @@ Feature: In this feature I'm testing the Products Page of ict4Apps site without 
     When  Click on the back-top button
     Then  Page "Products - ict4apps_training" is open
 
+  Scenario: Demo.ict.13.0027  Check the grid mode.
+    When  Click on the button of view mode as a grid
+    Then  All products is displayed in grid mode
+
+
 
 
 

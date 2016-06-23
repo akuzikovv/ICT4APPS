@@ -375,6 +375,14 @@ public class EndUserSteps extends ScenarioSteps {
         productsPage.clickOnTheBackTopButton();
     }
 
+    public void clickOnTheButtonOfViewModeAsAGrid() {
+        productsPage.clickOnTheButtonOfViewModeAsAGrid();
+    }
+
+    public void checkThatallProductsIsDisplayedInGridMode() {
+        Assert.assertTrue("False", productsPage.checkThatallProductsIsDisplayedInGridMode());
+    }
+
 
 //    @Step
 //    public void pageIsOpen(String arg0) {
