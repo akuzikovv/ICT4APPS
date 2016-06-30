@@ -151,6 +151,11 @@ Feature: In this feature I'm testing the Products Page of ict4Apps site without 
     When  Click on Products at breadcrumbs
     Then  open Products page
 
+  Scenario: Demo.ict.13.0033  Check that element Products at breadcrumbs: ict4apps_training - Products is matched opened category
+    When  Click on Read More link
+    Then  Item of Product is matched with last element at Breadcrumbs elements
+
+
 
 
 
