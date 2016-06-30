@@ -155,6 +155,17 @@ Feature: In this feature I'm testing the Products Page of ict4Apps site without 
     When  Click on Read More link
     Then  Item of Product is matched with last element at Breadcrumbs elements
 
+  Scenario: Demo.ict.13.0034  Check that "Scrollup" button is dispalyed
+    When Scroll down the page
+    Then  Scrollup button is Visible
+
+
+  Scenario: Demo.ict.13.0035  Verify functionality of "Scrollup" button
+    When Scroll down the page
+    When Click on the Scrollup button
+    Then  Page is scrolled up
+
+
 
 
 
