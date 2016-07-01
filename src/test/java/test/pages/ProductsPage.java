@@ -5,8 +5,14 @@ import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import test.ILocators;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 @DefaultUrl("http://192.168.214.3:8080/products")
@@ -246,6 +252,7 @@ public class ProductsPage extends PageObject {
 
     public void clickOnReadMoreLink() {
         $(ILocators._3_READ_MORE).click();
+        Serenity.getCurrentSession().put("Title of product", $(ILocators.TITLE_OF_PRODUCT).getText().toUpperCase());
     }
 
     public void clickOnDetailProductImage() {
@@ -309,17 +316,128 @@ public class ProductsPage extends PageObject {
         return  true;
     }
 
+    public void moveTheCursorToProductImage() {
+        $(ILocators.IMAGE_OF_PRODUCT_GRID).click();
+    }
 
-//    public void checkThatLastPageOfGalleryIsOpen2() {
-//        String text = null;
-//        String text2 = null;
-//        Serenity.getCurrentSession().put(text, $(ILocators.PAGE_OF_COMBOBOX_TEXT).getText().toUpperCase());
-//        int start2 = 10;
-//        int end2 = 12;
-//        char buf2[] = new char[end2 - start2];
-//        text.getChars(start2, end2, buf2, 0);
-//        Serenity.getCurrentSession().put(text2, buf2);
-//           }
+    public boolean checkThatimageIsChangedToProductNameShortDescriptionReadMoreLinkAndSocialNetworksLinks() {
+        $(ILocators.SHARED_LINKS_ON_GRID).isPresent();
+        $(ILocators.TITLE_OFPRODUCT_IN_GRID).isPresent();
+        $(ILocators.INTRO_TEXT_ON_PRODUCT_IN_GRID).isPresent();
+        $(ILocators.READ_MORE_IN_GRID).isPresent();
+        return true;
+    }
+
+    public void clickOnTitleOfProduct() {
+        $(ILocators.TITLE_OFPRODUCT_IN_GRID).click();
+    }
+
+    public void clickOnTheReadMoreLink() {
+        $(ILocators.READ_MORE_IN_GRID).click();
+    }
+
+    public void clickOnTagList() {
+        Serenity.getCurrentSession().put("Tag text", $(ILocators.TAGS).getText().toUpperCase());
+        $(ILocators.TAGS).click();
+    }
+
+    public String checkThatproductsListIsOpenedInAppropriateListOfCategories() {
+        return $(ILocators.TITLE_OF_CATEGORY).getText().toUpperCase();
+
+    }
+
+    public void clickOnProductsAtBreadcrumbs() {
+        $(ILocators.BREADCRUMB2).click();
+    }
+
+    public String checkThatitemOfProductIsMatchedWithLastElementAtBreadcrumbsElements() {
+
+        return $(ILocators.BREADCRUMB5).getText().toUpperCase();
+
+    }
+
+    public boolean checkThatscrollupButtonIsVisible() {
+        $(ILocators.SCROLLUP_BUTTON).isVisible();
+        return true;
+    }
+
+
+
+    public void clickOnTheScrollupButton() {
+        $(ILocators.SCROLLUP_BUTTON).click();
+    }
+
+    public boolean checkThatpageIsScrolledUp() {
+         $(ILocators.SCROLLUP_BUTTON).isVisible();
+        return false;
+
+    }
+
+    public void clickOnVKIcon() {
+        $(ILocators.VK_IN_GRID).click();
+    }
+
+    public boolean checkThatVKAuthorizationPageIsOpened() {
+        List<WebElement> listOfItems = getDriver().findElements(By.xpath(".//div[3]/*/span/a"));
+            List <WebElement> url = new ArrayList<WebElement>();
+            WebDriverWait wait = new WebDriverWait(getDriver(), 1);
+            String startUrl= "http://192.168.214.3:8080/products/-/category/vegetables";
+            for (int i = 0; i<=listOfItems.size(); i++) {
+                listOfItems = getDriver().findElements(By.xpath(".//div[3]/*/span/a"));
+                getDriver().manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+                wait.until(ExpectedConditions.visibilityOf(listOfItems.get(i)));
+                listOfItems.get(i).click();
+                getDriver().getCurrentUrl();
+                ////есть сомнения в корретности работы
+                for (WebElement URL : url)
+                    if (URL.getText().equals(startUrl))
+                        return false;
+            }
+            return true;
+
+
+//////////////////////////////////////////////////////////////
+//        $(Path.CLICK_ON_TWITTER_LINK).click();
+//        String parent = getDriver().getWindowHandle();
+//        Set<String> popup = getDriver().getWindowHandles();
+//        Iterator<String> twitter = popup.iterator();
+//        while (twitter.hasNext()) {
+//            String popupHandle=twitter.next().toString();
+//            if(!popupHandle.contains(parent))
+//            {   Set<String> beforePopup = getDriver().getWindowHandles();
+//                Set<String> afterPopup = getDriver().getWindowHandles();
+//                afterPopup.removeAll(beforePopup);
+//                if(afterPopup.size() == 1)
+//                {
+//                    getDriver().switchTo().window((String)afterPopup.toArray()[0]);
+//                }
+//                getDriver().switchTo().window(popupHandle);
+//                getDriver().close();
+//            }
+//        }
+        ////////////////////////////////////////////
+//        public boolean clickOnSocialNet(String socialNet) throws InterruptedException {
+//            List <WebElement> listOfItems = getDriver().findElements(By.xpath(".//div[3]/*/span/a"));
+//            List <WebElement> url = new ArrayList<WebElement>();
+//            WebDriverWait wait = new WebDriverWait(getDriver(), 1);
+//            String startUrl= "http://192.168.214.3:8080/products/-/category/vegetables";
+//            for (int i = 0; i<=listOfItems.size(); i++) {
+//                listOfItems = getDriver().findElements(By.xpath(".//div[3]/*/span/a"));
+//                getDriver().manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+//                wait.until(ExpectedConditions.visibilityOf(listOfItems.get(i)));
+//                listOfItems.get(i).click();
+//                getDriver().getCurrentUrl();
+//                ////есть сомнения в корретности работы
+//                for (WebElement URL : url)
+//                    if (URL.getText().equals(startUrl))
+//                        return false;
+//            }
+//            return true;
+//        }
+        ////////////////////////////////////////////////////
+    }
+
+
 
 
 }
