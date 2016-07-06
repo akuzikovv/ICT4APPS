@@ -15,14 +15,6 @@ import test.ILocators;
 
 public class ProductsPage extends PageObject {
 
-
-    //public String welcome_button_get(){
-    //    return $(ILocators.WELCOME_BUTTON).getText();
-    //  }
-//    @FindBy(xpath = ILocators.PRODUCTS_TITLE_OF_PRODUCT_LIST)
-//    private WebElement  productsTitlesList;
-
-
     public boolean checkThatProductsPageContainWelcomeButton() {
         if ($(ILocators.WELCOME_BUTTON).isPresent()) return true;
         else return false;
@@ -100,7 +92,6 @@ public class ProductsPage extends PageObject {
         $(ILocators.ARROW_OF_FIRST_CATEGORY1).click();
     }
 
-
     public void click_on_arrow_of_subcategory() {
         waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath((ILocators.ARROW_OF_FIRST_SUBCATEGORY))));
         $(ILocators.ARROW_OF_FIRST_SUBCATEGORY).click();
@@ -171,33 +162,8 @@ public class ProductsPage extends PageObject {
         $(ILocators.LAST_BUTTON).click();
     }
 
-    //    public void checkThatLastPageOfGalleryIsOpen(String text) {
-//        Serenity.getCurrentSession().put(text, $(ILocators.PAGE_OF_COMBOBOX_TEXT).getText().toUpperCase());
-//        int start = 5;
-//        int end = 7;
-//        char buf[] = new char[end - start];
-//        text.getChars(start, end, buf, 0);
-////        Serenity.getCurrentSession().get("text", (text).getChars(start, end, buf, 0));
-////        return $(ILocators.PAGE_OF_COMBOBOX_TEXT).getText().toUpperCase();
-//    }
     public String checkThatLastPageOfGalleryIsOpen1() {
         return $(ILocators.SHOWING_OF_RESULTS).getText().toUpperCase();
-//        String text = null;
-//        String text1 = null;
-//        String text2 = null;
-//        Serenity.getCurrentSession().put(text, $(ILocators.PAGE_OF_COMBOBOX_TEXT).getText().toUpperCase());
-//        int start1 = 5;
-//        int end1 = 7;
-//        int start2 = 10;
-//        int end2 = 12;
-//        char buf1[] = new char[end1 - start1];
-//        char buf2[] = new char[end2 - start2];
-//        text.getChars(start1, end1, buf1, 0);
-//        text.getChars(start2, end2, buf2, 0);
-//        Serenity.getCurrentSession().put(text1, buf1);
-//        Serenity.getCurrentSession().put(text2, buf2);
-//        Assert.assertEquals(text1, text2);
-//        return true;
     }
 
     public void clickOnThePreviousButton() {
@@ -347,17 +313,13 @@ public class ProductsPage extends PageObject {
     }
 
     public String checkThatitemOfProductIsMatchedWithLastElementAtBreadcrumbsElements() {
-
         return $(ILocators.BREADCRUMB5).getText().toUpperCase();
-
     }
 
     public boolean checkThatscrollupButtonIsVisible() {
         $(ILocators.SCROLLUP_BUTTON).isVisible();
         return true;
     }
-
-
 
     public void clickOnTheScrollupButton() {
         $(ILocators.SCROLLUP_BUTTON).click();
@@ -366,7 +328,6 @@ public class ProductsPage extends PageObject {
     public boolean checkThatpageIsScrolledUp() {
          $(ILocators.SCROLLUP_BUTTON).isVisible();
         return false;
-
     }
 
     public void clickOnVKIcon() {
@@ -379,51 +340,8 @@ public class ProductsPage extends PageObject {
             getDriver().switchTo().window(handle);
         }
         $(ILocators.VK_PAGE).isPresent();
-return true;
-
-
-
-//////////////////////////////////////////////////////////////
-//        $(Path.CLICK_ON_TWITTER_LINK).click();
-//        String parent = getDriver().getWindowHandle();
-//        Set<String> popup = getDriver().getWindowHandles();
-//        Iterator<String> twitter = popup.iterator();
-//        while (twitter.hasNext()) {
-//            String popupHandle=twitter.next().toString();
-//            if(!popupHandle.contains(parent))
-//            {   Set<String> beforePopup = getDriver().getWindowHandles();
-//                Set<String> afterPopup = getDriver().getWindowHandles();
-//                afterPopup.removeAll(beforePopup);
-//                if(afterPopup.size() == 1)
-//                {
-//                    getDriver().switchTo().window((String)afterPopup.toArray()[0]);
-//                }
-//                getDriver().switchTo().window(popupHandle);
-//                getDriver().close();
-//            }
-//        }
-        ////////////////////////////////////////////
-//        public boolean clickOnSocialNet(String socialNet) throws InterruptedException {
-//            List <WebElement> listOfItems = getDriver().findElements(By.xpath(".//div[3]/*/span/a"));
-//            List <WebElement> url = new ArrayList<WebElement>();
-//            WebDriverWait wait = new WebDriverWait(getDriver(), 1);
-//            String startUrl= "http://192.168.214.3:8080/products/-/category/vegetables";
-//            for (int i = 0; i<=listOfItems.size(); i++) {
-//                listOfItems = getDriver().findElements(By.xpath(".//div[3]/*/span/a"));
-//                getDriver().manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-//                wait.until(ExpectedConditions.visibilityOf(listOfItems.get(i)));
-//                listOfItems.get(i).click();
-//                getDriver().getCurrentUrl();
-//                ////есть сомнения в корретности работы
-//                for (WebElement URL : url)
-//                    if (URL.getText().equals(startUrl))
-//                        return false;
-//            }
-//            return true;
-//        }
-        ////////////////////////////////////////////////////
+        return true;
     }
-
 
     public void clickOnTwitterIcon() {
         $(ILocators.TWITTER_IN_GRID).click();
@@ -492,20 +410,12 @@ return true;
         return  true;
     }
 
-
     public boolean tabletextGet() {
         if ($(ILocators.SEARCH_RESULT_TABLE).containsText("lemon")) {
             return true;    }
         else return false;
     }
 }
-
-
-
-
- /*
-
-*/
 
 
 
