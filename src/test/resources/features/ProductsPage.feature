@@ -165,6 +165,12 @@ Feature: In this feature I'm testing the Products Page of ict4Apps site without 
     When Click on the Scrollup button
     Then  Page is scrolled up
 
+  Scenario: Demo.ict.13.0036  Check that "VK" authorization page is opening
+    When  Click on the button of view mode as a grid
+    When  Move the cursor to product image
+    When  Click on VK icon
+    Then  The VK authorization page is opened
+
 
 
 
