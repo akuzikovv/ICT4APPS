@@ -171,30 +171,34 @@ Feature: In this feature I'm testing the Products Page of ict4Apps site without 
     When  Click on VK icon
     Then  The VK authorization page is opened
 
-  Scenario: Demo.ict.13.0037  Check that "Twitter" authorization page is opening
+  Scenario: Demo.ict.13.0038  Check that "Twitter" authorization page is opening
     When  Click on the button of view mode as a grid
     When  Move the cursor to product image
     When  Click on Twitter icon
     Then  The Twitter authorization page is opened
 
-  Scenario: Demo.ict.13.0038  Check that "Linkedin" authorization page is opening
+  Scenario: Demo.ict.13.0039  Check that "Linkedin" authorization page is opening
     When  Click on the button of view mode as a grid
     When  Move the cursor to product image
     When  Click on Linkedin icon
     Then  The Linkedin authorization page is opened
 
-  Scenario: Demo.ict.13.0039  Check that "Pinterest" authorization page is opening
+  Scenario: Demo.ict.13.0040  Check that "Pinterest" authorization page is opening
     When  Click on the button of view mode as a grid
     When  Move the cursor to product image
     When  Click on Pinterest icon
     Then  The Pinterest authorization page is opened
 
-  Scenario: Demo.ict.13.0040  Check that "GooglePlus" authorization page is opening
+  Scenario: Demo.ict.13.0041  Check that "GooglePlus" authorization page is opening
     When  Click on the button of view mode as a grid
     When  Move the cursor to product image
     When  Click on GooglePlus icon
     Then  The GooglePlus authorization page is opened
 
+  Scenario: Demo.ict.13.0042  Check the Search
+    When  Enter  "lemon" data to the search field
+    When  Click on the "Search" button
+    Then  Search results is displayed on page
 
 
 

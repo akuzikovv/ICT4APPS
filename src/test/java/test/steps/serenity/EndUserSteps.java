@@ -4,6 +4,7 @@ import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import test.pages.CreateAccount;
 import test.pages.ProductsPage;
 import test.pages.SignInPage;
@@ -383,56 +384,106 @@ public class EndUserSteps extends ScenarioSteps {
         Assert.assertTrue("False", productsPage.checkThatallProductsIsDisplayedInGridMode());
     }
 
-
-//    @Step
-//    public void pageIsOpen(String arg0) {
-//        assertThat(productsPage.getDriver().getTitle()).isEqualTo(arg0);
-//
-//    }
-
-
-
-
-//    @Step
-//    public void checkThatTitleOfFirstCategoryHasNcessaryText(String titleOfFirstCategory) {
-//        Assert.assertTrue(productsPage.TextOfTitleOfFirstCategoryGet().contains(titleOfFirstCategory));
-//    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-   /*
-   @Step
-    public void click_on_WELCOME_Button(){
-        productsPage.click_on_WELCOME_Button();
-    }
-    @Step
-    public void checkThatWelcomePageIsOpen(){
-        Assert.assertTrue("False", productsPage.checkThatWelcomePageIsOpen());
+    public void moveTheCursorToProductImage() {
+        productsPage.moveTheCursorToProductImage();
     }
 
-   @Step
-    public void click_on_title_of_product(int numberOfTitleOfProduct) {
-        productsPage.click_on_title_of_product(numberOfTitleOfProduct);
-    }
-    @Step
-    public void checkThatOnFullDescriptionOfProductHasRightTitle() {
-    Assert.assertEquals(Serenity.getCurrentSession().get("titleOfCurrentProduct"),productsPage.titleOfAppropriateProductsTextGet());
-    }
-    @Step
-    public void checkThatOnFullDescriptionOfProductHasNecessaryText(String fullDescriptionText) {
-        Assert.assertTrue(productsPage.bitOfTextOfFullDescriptionOfProductGet().contains(fullDescriptionText));
+    public void checkThatimageIsChangedToProductNameShortDescriptionReadMoreLinkAndSocialNetworksLinks() {
+        Assert.assertTrue("False", productsPage.checkThatimageIsChangedToProductNameShortDescriptionReadMoreLinkAndSocialNetworksLinks());
     }
 
-*/
+    public void clickOnTitleOfProduct() {
+        productsPage.clickOnTitleOfProduct();
+    }
+
+    public void clickOnTheReadMoreLink() {
+        productsPage.clickOnTheReadMoreLink();
+    }
+
+    public void clickOnTagList() {
+        productsPage.clickOnTagList();
+    }
+
+    public void checkThatproductsListIsOpenedInAppropriateListOfCategories() {
+        Assert.assertEquals(Serenity.getCurrentSession().get("Tag text"), productsPage.checkThatproductsListIsOpenedInAppropriateListOfCategories());
+    }
+
+    public void clickOnProductsAtBreadcrumbs() {
+        productsPage.clickOnProductsAtBreadcrumbs();
+    }
+
+    public void checkThatitemOfProductIsMatchedWithLastElementAtBreadcrumbsElements() {
+Assert.assertEquals(Serenity.getCurrentSession().get("Title of product"), productsPage.checkThatitemOfProductIsMatchedWithLastElementAtBreadcrumbsElements());
+    }
+
+    public void checkThatscrollupButtonIsVisible() {
+        Assert.assertTrue("False", productsPage.checkThatscrollupButtonIsVisible());
+    }
+
+    public void scrollDownThePage() {
+        ((JavascriptExecutor)getDriver()).executeScript("scroll(0,document.body.scrollHeight)");
+        waitABit(3000);
+    }
+
+    public void clickOnTheScrollupButton() {
+        productsPage.clickOnTheScrollupButton();
+    }
+
+    public void checkThatpageIsScrolledUp() {
+        Assert.assertFalse("True", productsPage.checkThatpageIsScrolledUp());
+    }
+
+    public void clickOnVKIcon() {
+        productsPage.clickOnVKIcon();
+    }
+
+    public void checkThatVKAuthorizationPageIsOpened() {
+       Assert.assertTrue("False", productsPage.checkThatVKAuthorizationPageIsOpened());
+    }
+
+    public void clickOnTwitterIcon() {
+        productsPage.clickOnTwitterIcon();
+    }
+
+    public void checkThatTwitterAuthorizationPageIsOpened() {
+        Assert.assertTrue("False", productsPage.checkThatTwitterAuthorizationPageIsOpened());
+    }
+
+    public void clickOnLinkedinIcon() {
+        productsPage.clickOnLinkedinIcon();
+    }
+
+    public void checkThatLinkedinAuthorizationPageIsOpened() {
+        Assert.assertTrue("False",productsPage.checkThatLinkedinAuthorizationPageIsOpened());
+    }
+
+    public void clickOnPinterestIcon() {
+        productsPage.clickOnPinterestIcon();
+    }
+
+    public void checkThatPinterestAuthorizationPageIsOpened() {
+        Assert.assertTrue("False",productsPage.checkThatPinterestAuthorizationPageIsOpened());
+    }
+
+    public void clickOnGooglePlusIcon() {
+        productsPage.clickOnGooglePlusIcon();
+    }
+
+    public void checkThatGooglePlusAuthorizationPageIsOpened() {
+        Assert.assertTrue("False",productsPage.checkThatGooglePlusAuthorizationPageIsOpened());
+    }
+
+    public void enterDataToTheSearchField() {
+        productsPage.enterDataToTheSearchField();
+    }
+
+    public void clickOnTheSearchButton() {
+        productsPage.clickOnTheSearchButton();
+    }
+
+    public void checkThatsearchResultsIsDisplayedOnPage() {
+        Assert.assertTrue("False", productsPage.checkThatsearchResultsIsDisplayedOnPage());
+        Assert.assertTrue("False",productsPage.tabletextGet());
+    }
 
 }

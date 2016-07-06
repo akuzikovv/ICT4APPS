@@ -33,7 +33,7 @@ public interface ILocators {
 
     ////////////////////////////  PRODUCTS PAGE    /////////////////////////////////////////
     String PRODUCTS_PAGE_TITLE = "(//h3)[1]";
-    String SEARCH_FIELD = "//input[@class='search-query']";
+    String SEARCH_FIELD = "//input[@id='yui_patched_v3_11_0_1_1430216317928_790']";
     String SEARCH_BUTTON = "//button[@class='btn btn-dash']";
     String BREADCRUMB_ICT4APPS = "//a[@href='http://192.168.214.3:8080']";
     String BREADCRUMB_PRODUCTS = "//a[@href='http://192.168.214.3:8080/products']";
@@ -41,6 +41,7 @@ public interface ILocators {
     String TITLE_OF_FIRST_CATEGORY = "(//h3)[1]";
     String SECOND_CATEGORY_OF_PRODUCTS = "(//span[@class])[4]";
     String TITLE_OF_CATEGORY = "(//h3)[1]";
+    String TITLE_OF_PRODUCT = "(//h1[@class='product-title']//span)[2]";
     String ARROW_OF_FIRST_CATEGORY = "(//a[@class='jqtree_common jqtree-toggler jqtree-closed'])[1]";
     String FIRST_LIST_OF_SUBCATEGORIES = "//li[@class='jqtree_common jqtree-folder']";
     String SECOND_LIST_OF_SUBCATEGORIES = "//li[@class='jqtree_common jqtree-folder']";
@@ -76,6 +77,34 @@ public interface ILocators {
     String LEFT_BUTTON_FOR_IMAGE = "//a[@class='image-viewer-control carousel-control left']";
     String CLOSE_BUTTON_FOR_IMAGE = "//button[@class='image-viewer-close close']";
     String BACK_TOP_BUTTON = "//a[@class='icon-circle-arrow-left previous-level']";
+    String IMAGE_OF_PRODUCT_GRID = "(//div[@class='product-mask'])[1]";
+    String SHARED_LINKS_ON_GRID = "(//span[@class='b-share'])[1]";
+    String TITLE_OFPRODUCT_IN_GRID = "(//h3[@class='galery-product__title'])[1]";
+    String INTRO_TEXT_ON_PRODUCT_IN_GRID ="(//div[@class='gallery-product__introtext'])[1]";
+    String READ_MORE_IN_GRID = "(//a[@class='grid_href product-grid__readmore product-readmore__link'])[1]";
+    String TAGS = "//li[@class='']";
+    String BREADCRUMB1 = "(//li)[6]";
+    String BREADCRUMB2 = "(//li)[7]";
+    String BREADCRUMB3 = "(//li)[8]";
+    String BREADCRUMB4 = "(//li)[9]";
+    String BREADCRUMB5 = "(//li)[9]";
+    String SCROLLUP_BUTTON = "//a[@href='#']";
+    String VK_IN_GRID = "(//span[@class='b-share']//a)[1]";
+    String VK_PAGE = "//div[@class='info_line']";
+    String TWITTER_PAGE = "//input[@type='submit']";
+    String TWITTER_IN_GRID ="(//span[@class='b-share']//a)[3]";
+    String LINKEDIN_IN_GRID = "(//span[@class='b-share']//a)[4]";
+    String LINKEDIN_PAGE = "//div[@class='logo_container']";
+    String PINTEREST_IN_GRID = "(//span[@class='b-share']//a)[5]";
+    String PINTEREST_PAGE = "//div[@class='inspiredLogo']";
+    String GOOGLEPLUS_IN_GRID = "(//span[@class='b-share']//a)[6]";
+    String GOOGLEPLUS_PAGE = "//div[@class='logo logo-w']";
+    String SEARCH_SELECTED_COMBOBOX = "(//option[@selected])[2]";
+    String SEARCH_RESULT_TABLE = "//table";
+
+
+
+
 
     String IMAGE = "//img[@class='image-viewer-image']";
 

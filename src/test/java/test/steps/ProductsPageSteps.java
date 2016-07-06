@@ -283,6 +283,133 @@ public class ProductsPageSteps {
         endUserSteps.checkThatallProductsIsDisplayedInGridMode();
     }
 
+    @When("^Move the cursor to product image$")
+    public void moveTheCursorToProductImage() throws Throwable {
+       endUserSteps.moveTheCursorToProductImage();
+    }
+
+    @Then("^Image is changed to product name,short description,Read More link and social networks links$")
+    public void imageIsChangedToProductNameShortDescriptionReadMoreLinkAndSocialNetworksLinks() throws Throwable {
+        endUserSteps.checkThatimageIsChangedToProductNameShortDescriptionReadMoreLinkAndSocialNetworksLinks();
+    }
+
+    @When("^Click on title of product$")
+    public void clickOnTitleOfProduct() throws Throwable {
+endUserSteps.clickOnTitleOfProduct();
+    }
+
+    @When("^Click on the Read More link$")
+    public void clickOnTheReadMoreLink() throws Throwable {
+        endUserSteps.clickOnTheReadMoreLink();
+    }
+
+    @When("^Click on Tag list$")
+    public void clickOnTagList() throws Throwable {
+        endUserSteps.clickOnTagList();
+    }
+
+    @Then("^Products list is opened in appropriate list of categories$")
+    public void productsListIsOpenedInAppropriateListOfCategories() throws Throwable {
+       endUserSteps.checkThatproductsListIsOpenedInAppropriateListOfCategories();
+    }
+
+    @When("^Click on Products at breadcrumbs$")
+    public void clickOnProductsAtBreadcrumbs() throws Throwable {
+       endUserSteps.clickOnProductsAtBreadcrumbs();
+    }
+
+    @Then("^Item of Product is matched with last element at Breadcrumbs elements$")
+    public void itemOfProductIsMatchedWithLastElementAtBreadcrumbsElements() throws Throwable {
+        endUserSteps.checkThatitemOfProductIsMatchedWithLastElementAtBreadcrumbsElements();
+    }
+
+    @Then("^Scrollup button is Visible$")
+    public void scrollupButtonIsVisible() throws Throwable {
+        endUserSteps.checkThatscrollupButtonIsVisible();
+    }
+
+    @When("^Scroll down the page$")
+    public void scrollDownThePage() throws Throwable {
+       endUserSteps.scrollDownThePage();
+    }
+
+    @When("^Click on the Scrollup button$")
+    public void clickOnTheScrollupButton() throws Throwable {
+        endUserSteps.clickOnTheScrollupButton();
+    }
+
+    @Then("^Page is scrolled up$")
+    public void pageIsScrolledUp() throws Throwable {
+        endUserSteps.checkThatpageIsScrolledUp();
+    }
+
+    @When("^Click on VK icon$")
+    public void clickOnVKIcon() throws Throwable {
+        endUserSteps.clickOnVKIcon();
+    }
+
+    @Then("^The VK authorization page is opened$")
+    public void theVKAuthorizationPageIsOpened() throws Throwable {
+        endUserSteps.checkThatVKAuthorizationPageIsOpened();
+    }
+
+    @When("^Click on Twitter icon$")
+    public void clickOnTwitterIcon() throws Throwable {
+        endUserSteps.clickOnTwitterIcon();
+    }
+
+    @Then("^The Twitter authorization page is opened$")
+    public void theTwitterAuthorizationPageIsOpened() throws Throwable {
+        endUserSteps.checkThatTwitterAuthorizationPageIsOpened();
+    }
+
+    @When("^Click on Linkedin icon$")
+    public void clickOnLinkedinIcon() throws Throwable {
+        endUserSteps.clickOnLinkedinIcon();
+    }
+
+    @Then("^The Linkedin authorization page is opened$")
+    public void theLinkedinAuthorizationPageIsOpened() throws Throwable {
+        endUserSteps.checkThatLinkedinAuthorizationPageIsOpened();
+    }
+
+    @When("^Click on Pinterest icon$")
+    public void clickOnPinterestIcon() throws Throwable {
+        endUserSteps.clickOnPinterestIcon();
+    }
+
+    @Then("^The Pinterest authorization page is opened$")
+    public void thePinterestAuthorizationPageIsOpened() throws Throwable {
+        endUserSteps.checkThatPinterestAuthorizationPageIsOpened();
+    }
+
+    @When("^Click on GooglePlus icon$")
+    public void clickOnGooglePlusIcon() throws Throwable {
+        endUserSteps.clickOnGooglePlusIcon();
+    }
+
+    @Then("^The GooglePlus authorization page is opened$")
+    public void theGooglePlusAuthorizationPageIsOpened() throws Throwable {
+        endUserSteps.checkThatGooglePlusAuthorizationPageIsOpened();
+    }
+
+    @When("^Enter  \"([^\"]*)\" data to the search field$")
+    public void enterDataToTheSearchField(String arg0) throws Throwable {
+       endUserSteps.enterDataToTheSearchField();
+    }
+
+    @When("^Click on the \"([^\"]*)\" button$")
+    public void clickOnTheButton(String arg0) throws Throwable {
+      endUserSteps.clickOnTheSearchButton();
+    }
+
+    @Then("^Search results is displayed on page$")
+    public void searchResultsIsDisplayedOnPage() throws Throwable {
+        endUserSteps.checkThatsearchResultsIsDisplayedOnPage();
+    }
+
+
+
 
 
 
