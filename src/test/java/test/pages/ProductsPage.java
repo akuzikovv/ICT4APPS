@@ -5,14 +5,10 @@ import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import test.ILocators;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 
 @DefaultUrl("http://192.168.214.3:8080/products")
@@ -375,25 +371,16 @@ public class ProductsPage extends PageObject {
 
     public void clickOnVKIcon() {
         $(ILocators.VK_IN_GRID).click();
+        waitABit(1500);
     }
 
     public boolean checkThatVKAuthorizationPageIsOpened() {
-        List<WebElement> listOfItems = getDriver().findElements(By.xpath(".//div[3]/*/span/a"));
-            List <WebElement> url = new ArrayList<WebElement>();
-            WebDriverWait wait = new WebDriverWait(getDriver(), 1);
-            String startUrl= "http://192.168.214.3:8080/products/-/category/vegetables";
-            for (int i = 0; i<=listOfItems.size(); i++) {
-                listOfItems = getDriver().findElements(By.xpath(".//div[3]/*/span/a"));
-                getDriver().manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-                wait.until(ExpectedConditions.visibilityOf(listOfItems.get(i)));
-                listOfItems.get(i).click();
-                getDriver().getCurrentUrl();
-                ////есть сомнения в корретности работы
-                for (WebElement URL : url)
-                    if (URL.getText().equals(startUrl))
-                        return false;
-            }
-            return true;
+        for (String handle : getDriver().getWindowHandles()) {
+            getDriver().switchTo().window(handle);
+        }
+        $(ILocators.VK_PAGE).isPresent();
+return true;
+
 
 
 //////////////////////////////////////////////////////////////
@@ -438,10 +425,80 @@ public class ProductsPage extends PageObject {
     }
 
 
+    public void clickOnTwitterIcon() {
+        $(ILocators.TWITTER_IN_GRID).click();
+        waitABit(1500);
+    }
+
+    public boolean checkThatTwitterAuthorizationPageIsOpened() {
+        for (String handle : getDriver().getWindowHandles()) {
+            getDriver().switchTo().window(handle);
+        }
+        $(ILocators.TWITTER_PAGE).isPresent();
+        return true;
+    }
+
+    public void clickOnLinkedinIcon() {
+        $(ILocators.LINKEDIN_IN_GRID).click();
+        waitABit(1500);
+    }
+
+    public boolean checkThatLinkedinAuthorizationPageIsOpened() {
+        for (String handle : getDriver().getWindowHandles()) {
+            getDriver().switchTo().window(handle);
+        }
+        $(ILocators.LINKEDIN_PAGE).isPresent();
+        return true;
+    }
+
+    public void clickOnPinterestIcon() {
+        $(ILocators.PINTEREST_IN_GRID).click();
+        waitABit(1500);
+    }
+
+    public boolean checkThatPinterestAuthorizationPageIsOpened() {
+        for (String handle : getDriver().getWindowHandles()) {
+            getDriver().switchTo().window(handle);
+        }
+        $(ILocators.PINTEREST_PAGE).isPresent();
+        return true;
+    }
+
+    public void clickOnGooglePlusIcon() {
+        $(ILocators.GOOGLEPLUS_IN_GRID).click();
+        waitABit(1500);
+    }
+
+    public boolean checkThatGooglePlusAuthorizationPageIsOpened() {
+        for (String handle : getDriver().getWindowHandles()) {
+            getDriver().switchTo().window(handle);
+        }
+        $(ILocators.GOOGLEPLUS_PAGE).isPresent();
+        return true;
+    }
+
+    public void enterDataToTheSearchField() {
+        WebElement element = getDriver().findElement(By.xpath(ILocators.SEARCH_FIELD));
+        element.sendKeys("lemon");
+    }
+
+    public void clickOnTheSearchButton() {
+        $(ILocators.SEARCH_BUTTON).click();
+    }
+
+    public boolean checkThatsearchResultsIsDisplayedOnPage() {
+        Serenity.getCurrentSession().put("search_combobox", $(ILocators.SEARCH_SELECTED_COMBOBOX).getText());
+        Assert.assertEquals("Products", Serenity.getCurrentSession().get("search_combobox") );
+        return  true;
+    }
 
 
+    public boolean tabletextGet() {
+        if ($(ILocators.SEARCH_RESULT_TABLE).containsText("lemon")) {
+            return true;    }
+        else return false;
+    }
 }
-
 
 
 
