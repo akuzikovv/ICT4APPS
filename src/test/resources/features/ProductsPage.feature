@@ -171,6 +171,20 @@ Feature: In this feature I'm testing the Products Page of ict4Apps site without 
     When  Click on VK icon
     Then  The VK authorization page is opened
 
+  Scenario: Demo.ict.13.0037  Check that "Twitter" authorization page is opening
+    When  Click on the button of view mode as a grid
+    When  Move the cursor to product image
+    When  Click on Twitter icon
+    Then  The Twitter authorization page is opened
+
+  Scenario: Demo.ict.13.0038  Check that "Linkedin" authorization page is opening
+    When  Click on the button of view mode as a grid
+    When  Move the cursor to product image
+    When  Click on Linkedin icon
+    Then  The Linkedin authorization page is opened
+
+
+
 
 
 
