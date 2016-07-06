@@ -183,6 +183,18 @@ Feature: In this feature I'm testing the Products Page of ict4Apps site without 
     When  Click on Linkedin icon
     Then  The Linkedin authorization page is opened
 
+  Scenario: Demo.ict.13.0039  Check that "Pinterest" authorization page is opening
+    When  Click on the button of view mode as a grid
+    When  Move the cursor to product image
+    When  Click on Pinterest icon
+    Then  The Pinterest authorization page is opened
+
+  Scenario: Demo.ict.13.0040  Check that "GooglePlus" authorization page is opening
+    When  Click on the button of view mode as a grid
+    When  Move the cursor to product image
+    When  Click on GooglePlus icon
+    Then  The GooglePlus authorization page is opened
+
 
 
 
