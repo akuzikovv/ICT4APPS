@@ -98,11 +98,13 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void click_on_the_Facebook_button() {
         signInPage.click_on_the_Facebook_button();
+        waitABit(3000);
     }
 
     @Step
-    public void Check_that_Facebook_authorization_page_is_open(String arg0) {
-          assertThat(signInPage.getDriver().getTitle()).isEqualTo(arg0);
+    public void Check_that_Facebook_authorization_page_is_open() {
+        Assert.assertTrue("false",signInPage.Check_that_Facebook_authorization_page_is_open());
+
     }
 
     @Step

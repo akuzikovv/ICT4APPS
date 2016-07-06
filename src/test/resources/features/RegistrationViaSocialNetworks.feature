@@ -16,7 +16,7 @@ Feature: In this feature I'm testing the registration via social networks
 
   Scenario: Demo.ict.02.0001
     When click on the Facebook button
-    Then Check that "Log into Facebook|Facebook" page is open
+    Then Check that Facebook page is open
 
   Scenario: Demo.ict.06.0001
     When click on the OpenID button

@@ -21,7 +21,7 @@ public interface ILocators {
     String GOOGLE_LOGO = "(//ins)[1]";
     String LINKEDIN_LOGO = "//p[@class='note']";
     String TWITTER_LOGO = "//img[@class='app-icon']";
-    String FACEBOOK_LOGO = "//span[@class='_7ad']";
+    String FACEBOOK_LOGO = "//span[@class='_50f6']";
     String OPENID_LOGO = "//span[@class='portlet-title-text']";
 
     ////////////////////////////  HEADER    /////////////////////////////////////////
@@ -95,6 +95,7 @@ public interface ILocators {
     String TWITTER_IN_GRID ="(//span[@class='b-share']//a)[3]";
     String LINKEDIN_IN_GRID = "(//span[@class='b-share']//a)[4]";
     String LINKEDIN_PAGE = "//div[@class='logo_container']";
+    String FACEBOOK_PAGE = "//div[@class='logo_container']";
     String PINTEREST_IN_GRID = "(//span[@class='b-share']//a)[5]";
     String PINTEREST_PAGE = "//div[@class='inspiredLogo']";
     String GOOGLEPLUS_IN_GRID = "(//span[@class='b-share']//a)[6]";

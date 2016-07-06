@@ -59,8 +59,8 @@ public class RegistrationViaSocialNetworksSteps {
         endUserSteps.Check_that_OpenID_authorization_page_is_open();
     }
 
-    @Then("^Check that \"([^\"]*)\" page is open$")
-    public void checkThatPageIsOpen(String arg0) throws Throwable {
-        endUserSteps.Check_that_Facebook_authorization_page_is_open(arg0);
+    @Then("^Check that Facebook page is open$")
+    public void checkThatPageIsOpen() throws Throwable {
+        endUserSteps.Check_that_Facebook_authorization_page_is_open();
     }
 }

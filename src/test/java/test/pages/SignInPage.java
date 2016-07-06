@@ -50,7 +50,11 @@ public class SignInPage extends PageObject {
     }
 
 
-
-
-
+    public boolean Check_that_Facebook_authorization_page_is_open() {
+        for (String handle : getDriver().getWindowHandles()) {
+            getDriver().switchTo().window(handle);
+        }
+        $(ILocators.FACEBOOK_LOGO).isPresent();
+        return true;
+    }
 }
