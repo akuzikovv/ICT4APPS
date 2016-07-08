@@ -1,0 +1,6 @@
+Feature: In this feature I'm testing the Sign In  of ict4Apps site
+  Background:
+    Given Open SIGN IN page
+
+  Scenario: Demo.ict.01.0007 Check that "SIGN IN" page contains all necessary fields and buttons
+    Then  Check that SignIn page contain all necessary fields and buttons
