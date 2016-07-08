@@ -57,4 +57,17 @@ public class SignInPage extends PageObject {
         $(ILocators.FACEBOOK_LOGO).isPresent();
         return true;
     }
+
+    public boolean checkThatSignInPageContainAllNecessaryFieldsAndButtons() {
+    $(ILocators.LINKEDIN_BUTTON).isPresent();
+//        $(ILocators.LINKEDIN_BUTTON).isPresent();
+//        $(ILocators.TWITTER_BUTTON).isPresent();
+//        $(ILocators.FACEBOOK_BUTTON).isPresent();
+//        $(ILocators.OPENID_BUTTON).isPresent();
+        return true;
+//        else  return  false;
+
+
+
+    }
 }

@@ -520,4 +520,8 @@ Assert.assertEquals(Serenity.getCurrentSession().get("Title of product"), produc
     public void checkThatWELCOMEPageShouldBeOpen() {
         Assert.assertTrue("False", createAccount.checkThatWELCOMEPageShouldBeOpen());
     }
+
+    public void checkThatSignInPageContainAllNecessaryFieldsAndButtons() {
+        Assert.assertTrue("False", signInPage.checkThatSignInPageContainAllNecessaryFieldsAndButtons());
+    }
 }
