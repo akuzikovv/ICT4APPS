@@ -44,5 +44,43 @@ public class CreateAccountSteps {
     }
 
 
+    @When("^Click on the Country dropdown$")
+    public void clickOnTheCountryDropdown() throws Throwable {
+        endUserSteps.clickOnTheCountryDropdown();
+    }
 
+    @Then("^The list of countries should be open$")
+    public void theListOfCountriesShouldBeOpen() throws Throwable {
+       endUserSteps.checkThatListOfCountriesShouldBeOpen();
+    }
+
+    @When("^Click on the Birthday calendar$")
+    public void clickOnTheBirthdayCalendar() throws Throwable {
+        endUserSteps.clickOnTheBirthdayCalendar();
+    }
+
+    @Then("^Calendar is open$")
+    public void calendarIsOpen() throws Throwable {
+        endUserSteps.checkThatcalendarIsOpen();
+    }
+
+    @When("^Click on the Gender dropdown$")
+    public void clickOnTheGenderDropdown() throws Throwable {
+        endUserSteps.clickOnTheGenderDropdown();
+    }
+
+    @Then("^The list of genders is open$")
+    public void theListOfGendersIsOpen() throws Throwable {
+        endUserSteps.checkThatListOfGendersIsOpen();
+    }
+
+    @When("^Click on the Return to Full Page button$")
+    public void clickOnTheReturnToFullPageButton() throws Throwable {
+        endUserSteps.clickOnTheReturnToFullPageButton();
+    }
+
+    @Then("^A WELCOME page should be open$")
+    public void aWELCOMEPageShouldBeOpen() throws Throwable {
+        endUserSteps.checkThatWELCOMEPageShouldBeOpen();
+    }
 }

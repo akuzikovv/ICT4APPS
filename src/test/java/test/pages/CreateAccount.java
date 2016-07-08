@@ -1,8 +1,10 @@
 package test.pages;
 
 
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.DefaultUrl;
+import org.junit.Assert;
 import test.ILocators;
 
 @DefaultUrl("http://192.168.214.3:8080/welcome")
@@ -42,6 +44,45 @@ public class CreateAccount extends PageObject {
         $(ILocators.CREATE_ACCOUNT_BUTTON).click();
     }
 
+    public void clickOnTheCountryDropdown() {
+        $(ILocators.COUNTRY_COMBOBOX).click();
+    }
 
+    public boolean checkThatListOfCountriesShouldBeOpen() {
+        if ($(ILocators.COUNTRY_COMBOBOX).containsText(" afghanistan ")){
+            return true;}
+        else return false;
+    }
 
+    public void clickOnTheBirthdayCalendar() {
+        $(ILocators.CALENDAR).click();
+    }
+
+    public boolean checkThatcalendarIsOpen() {
+        if ($(ILocators.CALENDAR_LABEL).isVisible()){
+            return true;}
+        else return false;
+        }
+
+    public void clickOnTheGenderDropdown() {
+        $(ILocators.GENDER).click();
+    }
+
+    public boolean checkThatListOfGendersIsOpen() {
+        if ($(ILocators.FEMALE).isVisible()){
+            return true;}
+        else return false;
+        }
+
+    public void clickOnTheReturnToFullPageButton() {
+        $(ILocators.ICON_BACK).click();
+    }
+
+    public boolean checkThatWELCOMEPageShouldBeOpen() {
+        Serenity.getCurrentSession().put("welcome",$(ILocators.MAIN_TITLE).getText().toUpperCase());
+        Assert.assertEquals("WE OFFER THE BEST MEALS AT THE BEST VALUE TO YOUR DOOR IN NO TIME",Serenity.getCurrentSession().get("welcome"));
+       return true;
+    }
 }
+
+

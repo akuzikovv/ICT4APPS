@@ -12,6 +12,12 @@ public interface ILocators {
     String MESSAGE_REQUIRED_FIELD2 = "(//div[@class='required'])[2]";
     String MESSAGE_REQUIRED_FIELD3 = "(//div[@class='required'])[3]";
     String MESSAGE_REQUIRED_FIELD4 =  "//div[@class='email']";
+    String COUNTRY_COMBOBOX = "(//select[@id])[2]";
+    String CALENDAR = "//input[@id='_58_birthday']";
+    String CALENDAR_LABEL = "//div[@class='yui3-u yui3-calendar-header-label']";
+    String FEMALE = "//option[@value='0']";
+    String GENDER = "//select[@id='_58_create.account.page.gender.mail']";
+    String ICON_BACK ="//a[@class='portlet-icon-back']";
     ///////////////////////// SIGN IN PAGE /////////////////////////////////////////
     String GOOGLE_BUTTON = "(//a[@role='menuitem'])[6]";
     String LINKEDIN_BUTTON = "(//a[@role='menuitem'])[7]";

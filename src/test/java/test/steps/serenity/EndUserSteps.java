@@ -488,4 +488,36 @@ Assert.assertEquals(Serenity.getCurrentSession().get("Title of product"), produc
         Assert.assertTrue("False",productsPage.tabletextGet());
     }
 
+    public void clickOnTheCountryDropdown() {
+        createAccount.clickOnTheCountryDropdown();
+    }
+
+    public void checkThatListOfCountriesShouldBeOpen() {
+        Assert.assertTrue("False", createAccount.checkThatListOfCountriesShouldBeOpen());
+
+    }
+
+    public void clickOnTheBirthdayCalendar() {
+        createAccount.clickOnTheBirthdayCalendar();
+    }
+
+    public void checkThatcalendarIsOpen() {
+        Assert.assertTrue("False", createAccount.checkThatcalendarIsOpen());
+    }
+
+    public void clickOnTheGenderDropdown() {
+        createAccount.clickOnTheGenderDropdown();
+    }
+
+    public void checkThatListOfGendersIsOpen() {
+        Assert.assertTrue("false",createAccount.checkThatListOfGendersIsOpen());
+    }
+
+    public void clickOnTheReturnToFullPageButton() {
+        createAccount.clickOnTheReturnToFullPageButton();
+    }
+
+    public void checkThatWELCOMEPageShouldBeOpen() {
+        Assert.assertTrue("False", createAccount.checkThatWELCOMEPageShouldBeOpen());
+    }
 }
